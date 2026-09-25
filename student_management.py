@@ -2,22 +2,28 @@
 
 students = []
 
-print("===== Student Management System =====")
+number_of_students = int(input("How many students do you want to add? "))
 
-name = input("Enter student name: ")
-age = int(input("Enter student age: "))
-course = input("Enter student course: ")
+for i in range(number_of_students):
 
-student = {
-    "name": name,
-    "age": age,
-    "course": course
-}
+    print("\nEnter details for student", i + 1)
 
-students.append(student)
+    name = input("Enter student name: ")
+    age = int(input("Enter student age: "))
+    course = input("Enter student course: ")
 
-print("\nStudent added successfully!")
-print("Student Details:")
-print("Name:", student["name"])
-print("Age:", student["age"])
-print("Course:", student["course"])
+    student = {
+        "name": name,
+        "age": age,
+        "course": course
+    }
+
+    students.append(student)
+
+print("\n===== Student Details =====")
+
+for student in students:
+    print("Name:", student["name"])
+    print("Age:", student["age"])
+    print("Course:", student["course"])
+    print("-------------------------")
