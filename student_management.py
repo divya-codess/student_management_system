@@ -47,3 +47,25 @@ for student in students:
 
 if not found:
     print("Student not found.")
+
+
+# Update student details
+update_name = input("\nEnter student name to update: ")
+
+found = False
+
+for student in students:
+    if student["name"].lower() == update_name.lower():
+
+        print("\nStudent found. Enter new details.")
+
+        student["name"] = input("Enter new name: ")
+        student["age"] = int(input("Enter new age: "))
+        student["course"] = input("Enter new course: ")
+
+        print("\nStudent details updated successfully!")
+        found = True
+        break
+
+if not found:
+    print("Student not found.")
